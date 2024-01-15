@@ -1,0 +1,32 @@
+{% extends "customer/base.html" %}
+{% block content %}
+
+<div class="container mb-5"></div>
+<div class="row justify-content-center mt-1">
+    <div class="card col-md-5 col-sm-12 offset-md-1 p-4">
+<h1>Enter your address information:</h1>
+<form method="POST">
+    {% csrf_token %}
+    <div class="row mb-3">
+        <div class="col-sm-6">
+
+            <label for="firstname" class="form-label">First Name</label>
+            <input name="firstname" type="name" class="form-control" id="firstname" placeholder="Rahul" required>
+        </div>
+        <div class="col-sm-6">
+        <label for="lastname" class="form-label">Last Name</label>
+        <input name="lastname" type="name" class="form-control" id="lastname" placeholder="Singh"required>
+        </div>
+    </div>
+    <div class="mb-3">
+        <label for="address" class="form-label">Address</label>
+        <textarea name="address" class="form-control" id="address" rows="3" placeholder="123, Sector-1, Noida" required></textarea>
+    </div>
+    <button type='submit'>Order</button>
+</form>
+</div>
+</div>
+</div>
+{% endblock content %}
+
+
